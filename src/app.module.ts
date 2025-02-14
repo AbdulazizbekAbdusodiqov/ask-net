@@ -3,6 +3,8 @@ import { ConfigModule } from "@nestjs/config";
 import { MongooseModule } from "@nestjs/mongoose";
 import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
+import { CatModule } from './cat/cat.module';
+import { OwnerModule } from './owner/owner.module';
 
 @Module({
   imports: [
@@ -12,7 +14,9 @@ import { AuthModule } from './auth/auth.module';
     }),
     MongooseModule.forRoot(process.env.MONGO_URI!),
     AdminModule,
-    AuthModule
+    AuthModule,
+    CatModule,
+    OwnerModule
   ],
   controllers: [],
   providers: [],
