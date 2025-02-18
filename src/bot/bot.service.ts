@@ -52,7 +52,6 @@ export class BotService {
       const user_id = ctx.callbackQuery!["data"].split("_")[1]
       const gender = ctx.callbackQuery!["data"].split("_")[0];
       const user = await this.botModel.findOne({ user_id: String(user_id) });
-      console.log(user, user_id, gender, ctx.callbackQuery!["data"]);
       
 
       if (!user || !user.status) {

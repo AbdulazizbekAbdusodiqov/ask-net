@@ -8,6 +8,8 @@ import { OwnerModule } from "./owner/owner.module";
 import { BotModule } from "./bot/bot.module";
 import { TelegrafModule } from "nestjs-telegraf";
 import { BOT_NAME } from "./app.constants";
+import { ClientModule } from './client/client.module';
+import { SurveysModule } from './surveys/surveys.module';
 
 @Module({
   imports: [
@@ -25,6 +27,8 @@ import { BOT_NAME } from "./app.constants";
     CatModule,
     OwnerModule,
     BotModule,
+    ClientModule,
+    SurveysModule,
   ],
   controllers: [],
   providers: [],
