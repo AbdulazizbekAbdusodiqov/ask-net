@@ -5,19 +5,19 @@ export type ClientDocument = HydratedDocument<Client>;
 
 export class Client {
   @Prop({
-    required:true
+    required: true
   })
   full_name: string;
   @Prop({
-    required:true
+    required: true
   })
   company: string;
   @Prop({
-    required:true
+    required: true
   })
   phone_number: string;
   @Prop({
-    required:true
+    required: true
   })
   description: string;
 }

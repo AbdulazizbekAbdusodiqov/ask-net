@@ -19,16 +19,16 @@ export class SurveysController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.surveysService.findOne(+id);
+    return this.surveysService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateSurveyDto: UpdateSurveyDto) {
-    return this.surveysService.update(+id, updateSurveyDto);
+    return this.surveysService.update(id, updateSurveyDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.surveysService.remove(+id);
+    return this.surveysService.remove(id);
   }
 }

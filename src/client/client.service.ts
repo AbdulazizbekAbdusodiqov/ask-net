@@ -9,7 +9,7 @@ import { Model } from "mongoose";
 export class ClientService {
   constructor(
     @InjectModel(Client.name) private readonly clientModel: typeof Model<Client>
-  ) {}
+  ) { }
 
   create(createClientDto: CreateClientDto) {
     return this.clientModel.create(createClientDto);

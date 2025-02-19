@@ -4,25 +4,25 @@ import { IsPhoneNumber, IsString } from "class-validator";
 export class CreateClientDto {
   @IsString()
   @ApiProperty({
-    example: "Abdulazizbek Abdusodiqov",
+    example: "Komron Mamataliyev",
   })
   full_name: string;
-  
+
   @IsString()
   @ApiProperty({
-    example: "Abdulaziz-Dev",
+    example: "KoKo",
   })
   company: string;
-  
+
   @IsPhoneNumber('UZ')
   @ApiProperty({
-    example: "+998931234567",
+    example: "+998900340604",
   })
   phone_number: string;
-  
+
   @IsString()
   @ApiProperty({
-    example: "good company",
+    example: "very good company",
   })
   description: string;
 }
